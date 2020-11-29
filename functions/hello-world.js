@@ -1,13 +1,15 @@
 exports.handler = (event, context, callback) => {
- const product = await stripe.products.create({
-  name: 'T-shirt',
-});
+  const createProduct = async event => {
+    const product = await stripe.products.create({
+      name: "T-shirt",
+    })
+  }
 
   const response = {
     statusCode: 200,
     body: JSON.stringify({
-      message: 'Hi there!',
-      product : product,
+      message: "Hi there!",
+      product: product,
       event: event,
     }),
   }
