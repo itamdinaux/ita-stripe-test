@@ -2,18 +2,11 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 
 exports.handler = (event, context, callback) => {
   const element = async event => {
-    /*
     const product = await stripe.products.create({
       name: "T-shirt",
     })
-    */
-    const price = await stripe.prices.create({
-      product: "prod_IU6ImblE5DKllH",
-      unit_amount: 2000,
-      currency: "usd",
-    })
-    console.log(price)
-    return price
+
+    return product.name
   }
   const response = {
     statusCode: 200,
