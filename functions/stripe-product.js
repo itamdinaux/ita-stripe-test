@@ -6,11 +6,11 @@ exports.handler = (event, context, callback) => {
       name: "T-shirt",
     })
     const price = await stripe.prices.create({
-      product: product,
+      product: { product },
       unit_amount: 2000,
       currency: "usd",
     })
-    return price
+    return { price }
   }
   const response = {
     statusCode: 200,
