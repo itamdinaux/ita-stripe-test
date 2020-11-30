@@ -10,14 +10,16 @@ exports.handler = (event, context, callback) => {
       unit_amount: 2000,
       currency: "usd",
     })
+    return product
   }
-
   const response = {
     statusCode: 200,
     body: JSON.stringify({
       message: "Hi there!",
+      product: element(),
       event: event,
     }),
   }
+
   return callback(null, response)
 }
