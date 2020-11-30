@@ -26,6 +26,7 @@ exports.handler = (event, context, callback) => {
     statusCode: 200,
     body: JSON.stringify({
       message: "Hi there!",
+      stripe : price,
       event: event,
     }),
   }
