@@ -12,6 +12,7 @@ exports.handler = (event, context, callback) => {
       unit_amount: 2000,
       currency: "usd",
     })
+    console.log(price)
     return price
   }
   const response = {
