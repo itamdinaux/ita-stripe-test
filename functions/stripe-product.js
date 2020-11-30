@@ -10,7 +10,7 @@ exports.handler = (event, context, callback) => {
       unit_amount: 2000,
       currency: "usd",
     })
-    return product
+    return price
   }
   const response = {
     statusCode: 200,
