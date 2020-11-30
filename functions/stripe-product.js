@@ -6,7 +6,7 @@ exports.handler = (event, context, callback) => {
       name: "T-shirt",
     })
     const price = await stripe.prices.create({
-      product: "{{PRODUCT_ID}}",
+      product: product,
       unit_amount: 2000,
       currency: "usd",
     })
