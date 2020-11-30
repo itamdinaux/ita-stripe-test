@@ -6,7 +6,7 @@ exports.handler = (event, context, callback) => {
       name: "T-shirt",
     })
 
-    return product.name
+    return { product }
   }
   const response = {
     statusCode: 200,
