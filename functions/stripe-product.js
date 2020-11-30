@@ -1,4 +1,6 @@
 exports.handler = (event, context, callback) => {
+  const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
+
   const createProduct = async event => {
     const product = await stripe.products.create({
       name: "T-shirt",
